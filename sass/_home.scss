@@ -1,0 +1,339 @@
+.s-hero {
+  background: url('../assets/bg.png') no-repeat center center;
+  background-size: cover;
+  padding-top: 7.1rem;
+  margin-top: 6.4rem;
+  .container {
+    @include flex(row, center, space-between);
+    .text {
+      width: 100%;
+      max-width: 57.7rem;
+      h1 {
+        margin-bottom: 3.6rem;
+      }
+      span {
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: $white;
+        position: relative;
+        margin-bottom: 1.8rem;
+        &::before {
+          content: " ";
+          width: 13.7rem;
+          height: 0.1rem;
+          background-color: $brand-yellow;
+          position: absolute;
+          top: 1rem;
+          left: -0.7rem;
+          z-index: 2000;
+        }
+      } 
+      p {
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: $white;
+        margin-bottom: 1.8rem;
+        &.emoji {
+          margin-bottom: 3.6rem;
+        }
+      }
+      .bttns {
+        width: 100%;
+        max-width: 57.7rem;
+        @include flex(row, center, space-between);
+        margin-bottom: 1.3rem;
+        .baixe-app {
+          width: 100%;
+          max-width: 26.4rem;
+          @include flex(row, center, space-between);
+          .baixe-nosso-app {
+            
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+    }
+    .area-image {
+      width: 100%;
+      max-width: 58.7rem;
+      height: 53rem; 
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: -20rem;
+      .images {
+        width: 100%;
+        max-width: 34.6rem;
+        height: 53rem;
+        position: relative;
+        img {
+          position: absolute;
+          &.elipse {
+            z-index: 2;
+            top: -2rem;
+            left: -2rem;
+            animation: right 6s infinite;
+          }
+          &.maquininha {
+            z-index: 1;
+
+          }
+          &.discagem {
+            right: 2rem;
+            animation: left 6s infinite;
+          }
+        }
+      }
+
+      .textos {
+        position: relative;
+        span {
+          width: 100%;
+          max-width: 12.8rem;
+          color: $white;
+          line-height: 22px;
+          letter-spacing: -0.02em;
+          font-weight: 600;
+        }
+        ul {
+          margin-top: 3.4rem;
+          li {
+            line-height: 22px;
+            color: $white;
+            letter-spacing: -0.02em;
+            &:not(:last-child) {
+              margin-bottom: 1.4rem;
+            }
+            &::marker {
+              color: $brand-yellow;
+            }
+          }
+        }
+        .box {
+         
+          width: 26.5rem;
+          height: 13.6rem;
+          position: absolute;
+          bottom: -16rem;
+          left: -7rem;
+          background: rgba(151, 35, 58, 0.3);
+          .conteudo {
+            display: flex;
+            align-items: flex-start;
+            padding-left: 5.3rem;
+            padding-top: 4.4rem;
+            p {
+              line-height: 22px;
+              letter-spacing: -0.02em;
+              color: $white;
+              width: 100%;
+              max-width: 11.6rem;
+              margin-left: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(1110px){
+    .container {
+      .text{
+        .bttns {
+          max-width: 49.7rem;
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      flex-direction: column;
+      .text {
+        h1, span, h2, p {
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 0.6rem;
+        }
+        span {
+          display: block;
+          margin-bottom: 0;
+          &::before {
+            display: none;
+          }
+        }
+        p {
+          margin-bottom: 0;
+
+        }
+      }
+      .area-image {
+        margin-top: 4rem;
+        .box {
+          display: none;
+        }
+      }
+    }
+  }
+  @include responsive(600px) {
+    .container {
+      .text {
+        .bttns {
+          margin: 0 auto;
+          flex-direction: column;
+          .baixe-app {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .area-image {
+        flex-direction:column-reverse;
+        margin: 0 auto;
+        .images {
+          margin: 2rem auto;
+          max-width: 28.6rem;
+        }
+        .textos {
+          margin: 4rem auto;
+          h3, span {
+            text-align: center;
+           
+          }
+          span {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(600px) {
+    padding-top: 2.1rem;
+  }
+}
+
+.s-informacoes {
+  padding-top: 10.6rem;
+  padding-bottom: 8.1rem;
+  .container {
+    @include flex(row, center, space-between);
+    .taxa-unica {
+      h2 {
+        color: $primary-color-dark;
+      }
+      p {
+        width: 100%;
+        max-width: 11.2rem;
+        font-size: 1.4rem;
+        line-height: 19px;
+        letter-spacing: -0.02em;
+        color: $neutral-colors-200;
+      }
+    }
+    .vantagens {
+  
+      display: flex;
+      align-items: center;
+      .all-cards {
+        display: flex;
+        align-items: center;
+        margin-left: 5.1rem;
+        .arrow {
+          margin-left: 8.1rem;
+        }
+        .card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 5.1rem;
+          span {
+           
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(1100px) {
+    .container {
+      .taxa-unica {
+        display:  none;
+      }
+      .vantagens {
+        margin-right: 7rem;
+      }
+    }
+  }
+
+  @include responsive(991px) {
+    padding-top: 20rem;
+    .container {
+      .separator {
+        display: none;
+      }
+      .vantagens {
+        margin-right: 0;
+        .all-cards {
+          margin-left: 2.1rem;
+          .arrow {
+            margin-left: 3.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+     .vantagens {
+      .all-cards {
+        margin-left: 0;
+
+       .arrow {
+         margin-left: 2.1rem;
+
+       }
+       .card {
+         margin-left: 3.1rem;
+         
+       }
+    }
+     }
+  }
+}
+
+  @include responsive(600px) {
+    padding-top: 27rem;
+    .container {
+     .vantagens {
+       flex-direction: column;
+       margin: 0 auto;
+       p {
+         font-size: 1.8rem;
+         font-weight: 600;
+       }
+       .all-cards {
+         margin-left: 0;
+         margin-top: 2rem;
+        flex-direction: column;
+        .arrow {
+          margin-left: 0;
+          margin-right: 0;
+          margin: 0 auto;
+          margin-bottom: 3rem;
+          transform: rotate(90deg);
+        }
+        .card {
+          margin-left: 0;
+          margin-bottom: 3rem;
+          
+        }
+       }
+     }
+    }
+  }
+
+}
